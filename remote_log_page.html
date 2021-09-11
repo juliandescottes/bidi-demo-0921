@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WebDriver BiDi example page</title>
+  <style type="text/css">
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background-image: linear-gradient(#ffa9f1, #ff39d6);
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    height: 100%;
+  }
+
+  h1 {
+    position: absolute;
+    font-family: Futura;
+    color: white;
+    margin-left: 20px;
+    font-size: 24px;
+    text-shadow: 2px 0px 0 #d221ae;
+  }
+
+  button {
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    font-weight: bold;
+    box-shadow: 0px 0px 0px 0px white;
+    transition: all 0.2s;
+    margin-top:  -2px;
+    margin-left:  2px;
+    margin-right:  -2px;
+
+    background-image: linear-gradient(#4ebafb, #3636ff);
+  }
+
+  button:hover {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    box-shadow: 2px -2px 0px 0px white;
+  }
+
+  button:active {
+    margin-top:  -2px;
+    margin-left:  2px;
+    margin-right:  -2px;
+    box-shadow: 0px 0px 0px 0px white;
+  }
+
+  </style>
+</head>
+<body>
+  <h1>Fission iframe</h1>
+  <div class=wrapper>
+    <button id=hello>Fission Log</button>
+  </div>
+  <script type="text/javascript">
+    document.querySelector("#hello").addEventListener("click", () => {
+      console.log("hello from fission iframe!");
+    });
+  </script>
+</body>
+</html>
